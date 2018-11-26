@@ -544,7 +544,7 @@
             $scope.menuShow = false;
         };
 
-        $scope.servicio = {};
+        $scope.servicio = { imgs:['s1.jpg']};
         $scope.fullActive = false;
         $scope.full = function(obj){
             $scope.servicio = obj;
