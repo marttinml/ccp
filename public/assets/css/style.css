@@ -18,7 +18,7 @@
 body{
     font-family: 'manrope_regular', Arial;
     font-size: 16px;
-    color: rgb(13,13,13);
+    color: rgb(50,50,50);
     letter-spacing: .5px;
     line-height: 1.5;
 }
@@ -27,8 +27,9 @@ b{
     font-weight: 400;
 }
 h1,h2,h3,h4{
-    font-family: 'manrope_bold', Arial;
+    font-family: 'manrope_light', Arial;
     text-align: center;
+    font-weight: 100;
 }
 h1{
     font-size: 48px;
@@ -37,10 +38,10 @@ h2{
     font-size: 32px;
 }
 h3{
-    font-size: 22px;
+    font-size: 24px;
 }
 h4{
-    font-size: 16px;
+    font-size: 18px;
 }
 
 
@@ -96,19 +97,21 @@ nav ul a.logo-title{
     padding-left: 0;
 }
 nav ul a.logo-color i{
-    background-image: url(../img/curvaCCP.svg);
+    background-image: url(../img/ccp.logo.alone.svg);
     display: block;
     width: 70px;
     height: 70px;
     margin: 4px;
     background-repeat: no-repeat;
+    background-size: 150% auto;
+    background-position: center;
 }
 nav ul a i{
     font-size: 1.2em;
     margin: 10px;
 }
 nav ul a:hover{
-    color: rgb(81,18,111);
+    color: rgb(51,0,153);
 }
 nav ul a.c-purple:hover{
     color: rgba(81,18,111,.8);
@@ -135,13 +138,13 @@ hr{
 
 }
 .c-purple{
-    color: rgb(81,18,111);
+    color: rgb(51,0,153);
 }
 .c-gray{
     color: rgb(150,150,150);
 }
 .b-purple{
-    background-color: rgb(81,18,111);
+    background-color: rgb(51,0,153);
 }
 .b-black{
     background-color: rgb(20,20,20);
@@ -171,11 +174,11 @@ section.home{
     position:relative;
 }
 section.cirugias{
-    padding-top: 20px; 
+    /* padding-top: 20px;  */
 }
 section.us{
-    background-color: rgb(81,18,111) ; 
-    background-image: linear-gradient(to bottom right, rgb(81,18,111) , rgb(121,58,151)); /* Standard syntax (must be last) */
+    background-color: rgb(51,0,153) ; 
+    background-image: linear-gradient(to  bottom left, rgb(51,0,153) , rgb(153,0,255)); /* Standard syntax (must be last) */
     color: rgba(255,255,255,1);
     padding: 20px; 
 }
@@ -185,20 +188,24 @@ section.certi{
 section.contacto{
     padding: 20px;
 }
+.b-gradiente{
+    background-color: rgb(51,0,153) ; 
+    background-image: linear-gradient(to  bottom left, rgb(51,0,153) , rgb(153,0,255)); 
+}
 .b-white{background-color: rgba(255,255,255,.9);}
 .circle-r50{
     width: 80px;
     height: 80px;
     border-radius: 40px;
     /* background-color: rgb(255,255,255); */
-    /* color: rgb(81,18,111); */
+    /* color: rgb(51,0,153); */
     display: table-cell;
     vertical-align: middle;
     cursor: pointer;
 }
 /* .circle-r50:hover{
     box-shadow: 0 0 20px rgba(0,0,0,.5);
-    background-color: rgb(81,18,111);
+    background-color: rgb(51,0,153);
     color: rgb(255,255,255);
 } */
 .carousel-prev{
@@ -296,6 +303,8 @@ section.contacto{
     height: 250px;
     background-size: cover;
     background-position: center;
+    transition: .5s ease-in-out;
+    background-size: 130% auto;
 }
 .card .info{
     padding: 0px 16px;
@@ -333,14 +342,14 @@ section.contacto{
     left: 0;
     right: 0;
     height: 250px;
-    background-color: rgba(81,18,111,.8);
+    background-color: rgba(51,0,153,.7);
     opacity: 0;
     display: table;
     text-align: center;
     color: rgba(255,255,255,.7);
     width: 100%;
     font-family: 'manrope_regular', Arial;
-    transition: .3s;
+    transition: .5s;
     padding: 20px;
 }
 
@@ -365,8 +374,12 @@ section.contacto{
     vertical-align: middle;
 }
 .card:hover .hover-link{
-    opacity: 1;
-    transition: .3s;
+    opacity: .8;
+    transition: .5s;
+}
+.card:hover .img{
+    background-size: 150% auto;
+    transition: 1s ease-in-out;
 }
 
 ui-carousel{
@@ -377,11 +390,9 @@ ui-carousel{
 .filer-cats{
     border-bottom: 1px solid rgb(222,222,222);
     width: 100%;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 10px auto;
     height: 60px;
-    background-color: rgb(81,18,111);
-    color: white;
-
+    color: gray;
 }
 .filer-cats ul{
     vertical-align: middle;
@@ -401,27 +412,59 @@ ui-carousel{
     cursor: pointer;
 }
 .filer-cats ul li.active{
-    border-bottom: 1px solid rgba(255,255,255,.8);
-    /* color: rgb(81,18,111); */
-    background-color: rgba(121,58,151,.8);
+    border-bottom: 1px solid rgb(51,0,153);
+    color: rgb(51,0,153);
+    /* color: rgb(51,0,153); */
+    /* background-color: rgba(0,0,0,.3); */
 }
-/* .filer-cats ul li.active:after {
-    position: absolute;
-    content: "";
-    bottom: -6px;
-    left: 50%;
-    margin-left: -4px;
-    border-style: solid;
-    width: 4px;
-    height: 4px;
-    border-radius: 6px;
-    text-align: center;
-    background-color: rgb(81,18,111);
-    transition: .3s;
-} */
 
+
+.filer-sub{
+    width: 100%;
+    margin: 0 auto 10px auto;
+    height: 40px;
+    color: gray;
+}
+.filer-sub ul{
+    vertical-align: middle;
+    text-align: center;
+    height: inherit;
+    display: table;
+    margin: auto;
+}
+.filer-sub ul li{
+    display: inline-block;
+    padding: 10px 20px;
+    height: inherit;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(242,242,242);
+    margin: 10px 10px;
+    font-size: 14px;
+}
+.filer-sub ul li.active{
+    background-color: rgb(51,0,153);
+    color: rgb(255,255,255);
+}
+
+.content-text{
+    margin: auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center;
+    font-family: 'manrope_light', Arial;
+}
 .c-amber {
     color: #c9aa5d;
+}
+
+.xd{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
 }
 .content-info{
     /* background-color: rgba(255,255,255,.1); */
@@ -445,7 +488,7 @@ footer{
     background-color: black;
     padding-top: 50px;
     padding: 20px;
-    border-top: 4px dashed rgb(81,18,111);
+    border-top: 2px dashed rgb(51,0,153);
     position: relative;
 }
 .manos{
@@ -459,12 +502,11 @@ footer{
     border-radius: 4px;
 }
 .logo-footer-blanco{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     display: block;
     background-repeat: no-repeat;
-    /* background-image: url(../img/logo_blanco.svg); */
-    background-image: url(../img/logo_blanco-white.svg);
+    background-image: url(../img/ccp.logo.alone.white.svg);
     margin: auto;
     background-position: center;
 }
@@ -473,7 +515,7 @@ footer{
     display: none
 }
 .menu-mobile i{
-    color: rgb(81,18,111);
+    color: rgb(51,0,153);
 }
 .menu-mobile i.ex{
     display: none;
@@ -505,7 +547,7 @@ footer{
     top: 80px;
     left: 0px;
     right: 0px;
-    background-color: rgb(81,18,111);
+    background-color: rgb(51,0,153);
     margin: 0;
     padding: 0;
     padding-top: 0px;
@@ -574,7 +616,7 @@ footer{
 }
 .mapa{
     /* background-image: url(../img/mapa_dia.png); */
-    background-image: url(../img/mapa_noche.svg);
+    background-image: url(../img/64.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -596,7 +638,7 @@ footer{
     padding: 0px 20px;
 }
 .full-screen .header-full i:hover{
-    color: rgb(81,18,111);
+    color: rgb(51,0,153);
 }
 .full-screen .header-full{
     box-shadow: none;
@@ -604,7 +646,7 @@ footer{
     text-align: right;
     padding: 30px;
     padding-right: 30px;
-    color: rgb(81,18,111);
+    color: rgb(51,0,153);
 }
 .full-screen{
     position: fixed;
@@ -634,11 +676,15 @@ footer{
     visibility: visible;
     transition: .2s;
 }
+.full-screen .card:hover .img{
+    background-size: 120% auto;
+    transition: 1s;
+}
 .exit{
     position: absolute;
     right: 30px;
     top: 30px;
-    color: rgb(81,18,111);
+    color: rgb(51,0,153);
     text-shadow: 0 0 30px rgba(255,255,255,1);
 }
 
@@ -684,7 +730,7 @@ footer{
 .jssorb064 .i {position:absolute;cursor:pointer;}
 .jssorb064 .i .b {fill:#000;fill-opacity:.5;stroke:#fff;stroke-width:400;stroke-miterlimit:10;stroke-opacity:0.5;}
 .jssorb064 .i:hover .b {fill-opacity:.8;}
-.jssorb064 .iav .b {fill:rgb(81,18,111);fill-opacity:.5;stroke:rgb(81,18,111);stroke-opacity:.7;stroke-width:400;}
+.jssorb064 .iav .b {fill:rgb(51,0,153);fill-opacity:.5;stroke:rgb(51,0,153);stroke-opacity:.7;stroke-width:400;}
 .jssorb064 .iav:hover .b {fill-opacity:.6;}
 .jssorb064 .i.idn {opacity:.3;}
 
@@ -724,6 +770,16 @@ footer{
     .min-heigth-400{
         min-height: auto;
     }
+    .filer-sub{
+        height: 210px;;
+    }
+    .filer-sub ul{
+        width: 100%;
+    }
+    .filer-sub ul li{
+        display: block;
+        height: auto;
+    }
 }
 @media screen and (max-width: 500px) {
     .fs-16{
@@ -748,7 +804,7 @@ footer{
         padding: 20px;
         letter-spacing: 1px;
     }
-    section.cirugias,
+    
     section.contacto{
         padding: 0px;
         padding-top: 20px;

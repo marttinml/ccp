@@ -29,12 +29,12 @@
                                 <a class="logo-title c-purple" href="#home"><li >  Centro de Cirugía Plástica </li></a>
                         </ul>
                         <ul class="a-center menu-web" >
-                                <a href="#cirugias"><li>Cirugías</li></a>
+                                <a href="#cirugias"><li>Nuestros Servicios</li></a>
                                 <a href="#us"><li>Nosotros</li></a>
                                 <a href="#contacto"><li>Contacto</li></a>
                         </ul>
                         <ul class="a-right menu-web">
-                                <a href="tel:5567087001" class="c-purple"><i class="fas fa-phone"></i><li> <b>(55) 6708 7001 </b></li> </a>
+                                <a  class="c-purple"><i class="fas fa-phone"></i><li> <b>01 (55) 5523 1077  </b></li> </a>
                         </ul>
                 </nav>
                 <div class="menu-mobile" ng-class="{show: menuShow}">
@@ -42,11 +42,11 @@
                                 <i class="fas fa-times c-blue ex fa-lg" ng-click="hideMenu()"></i>
                 
                         <ul>
-                                <a href="#cirugias"  ng-click="hideMenu()"> <li><b>Cirugías</b></li></a>
+                                <a href="#cirugias"  ng-click="hideMenu()"> <li><b>Nuestros Servicios</b></li></a>
                                 <a href="#us"  ng-click="hideMenu()"> <li><b>Nosotros</b></li></a>
                                 <a href="#contacto"  ng-click="hideMenu()"> <li><b>Contacto</b></li></a>
                                 <li class="phone"><b>
-                                        <a href="tel:5567087001"><span>(55) 6708 7001 </span></a></b>
+                                        <a ><span>01 (55) 5523 1077  </span></a></b>
                                 </li>
                         </ul>
                 </div>
@@ -54,17 +54,12 @@
         </header>
 
         <section class="home" id="home">
-                <div id="jssor_2" style="position:relative;margin:0 auto;top:0px;left:0px;width:1366px;height:768px;overflow:hidden;visibility:hidden;">
+                <div id="jssor_2" style="position:relative;margin:0 auto;top:0px;left:0px;width:1366px;height:850px;overflow:hidden;visibility:hidden;">
                         <!-- Loading Screen -->
-                        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                                <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="../svg/loading/static-svg/spin.svg" />
-                        </div>
-                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1366px;height:768px;overflow:hidden;">
+                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1366px;height:850px;overflow:hidden;">
                                 
-                        <div ng-repeat="item in ctrl.slides">
-                                        <!-- <div class="img-slide" ng-style="{'background-image': item.image}"> -->
+                                <div ng-repeat="item in ctrl.slides">
                                         <img data-u="image" src="{{item.image}}" />
-                                        <!-- <img class="img-slide-item rotate-animate" ng-src="'assets/img/'+item.image" ng-click="full(services[0])"/> -->
                                 </div>
                         </div>
                         <div data-u="navigator" class="jssorb064" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
@@ -89,7 +84,7 @@
 
         </section>
         
-        <section class="cirugias " id="top3">
+        <!-- <section class="cirugias " id="top3">
                 <h2></h2>
                 <h1>TOP 3</h1>
 
@@ -105,9 +100,19 @@
                                 </div>
                         </div>
                 </div>
+        </section> -->
+        <section class="us" id="us">
+                <h1>BIENVENIDO</h1>
+                <div class="content-info">
+                        <p id="contentInfo">
+                                En el Centro de Cirugía Plástica le ofrecemos atención personalizada con cordialidad, calidez y calidad humana, brindándole la confianza, seguridad y certeza de que obtendrá un servicio óptimo con buenos resultados.
+                                Contamos con equipo y tecnología de vanguardia respaldada por profesionales certificados por los Consejos correspondientes para el desempeño de nuestro ejercicio.
+                                Nuestra función es brindarle un servicio de excelencia, a costos más accesibles y sin escatimar la calidad.
+                        </p>
+                </div>
         </section>
         <section class="cirugias padding-bottom-100" id="cirugias">
-                <h1>Cirugías</h1>
+                <!-- <h1>Nuestros Servicios</h1> -->
                 <div class="filer-cats">
                         <ul>
                                 <li ng-repeat="item in categorias" ng-class="{active: item.active}" ng-click="changeFilter(categorias, item)"> 
@@ -115,19 +120,29 @@
                                 </li>
                         </ul>
                 </div>
+                <div class="filer-sub"  ng-show="subcategorias.length">
+                        <ul>
+                                <li ng-repeat="item in subcategorias" ng-class="{active: item.active}"  ng-click="changeFilterSub(subcategorias, item)">{{item.name}}</li>
+                        </ul>
+                </div>
+
+                <h2 class="c-purple">{{filteredServices.length}} <span class="fs-16" ng-show="filteredServices.length === 1">Servicio</span> <span class="fs-16"  ng-show="filteredServices.length !== 1">Servicios</span></h2> 
 
                 <div class="item-row-relative max-width">
-                        <div class="item-col-relative padding-20 width-33p" ng-repeat="servicio in servicios | filter:search:strict">
+                        <div class="item-col-relative padding-20 width-33p" ng-repeat="servicio in filteredServices = (servicios | filter:search:strict)">
                                 <div class="card" ng-click="full(servicio)">
                                         <div class="img" ng-style="{'background-image': 'url(assets/img/'+servicio.imgs[0]+')'}"></div>
                                         <div class="hover-link"><span>VER MÁS</span></div>
                                         <div class="info t-center">
-                                                <h2>{{servicio.title}}</h2>
-                                                <p class="docs">{{servicio.desc}}</p>
+                                                <h4>{{servicio.title}}</h4>
+                                                <!-- <p class="docs">{{servicio.desc}}</p> -->
                                         </div>
                                 </div>
                         </div>
                 </div>
+                <h3 class="c-purple" ng-show="descCategoria">{{titleCategoria}}</h3>
+                <div class="content-text" ng-show="descCategoria">{{descCategoria}}</div>
+                <h4 class="c-purple cursor-pointer"  ng-click="full(preguntasf)">Preguntas Frecuentes</h4>
         </section>
 
         <section class="us padding-bottom-100" id="us">
@@ -147,7 +162,7 @@
 
                 <div class="item-row max-width">
                         <div class="item-col  padding-20 t-center">
-                                <div class="img-r100" style="background-image: url(assets/img/doctor-house.jpg)"></div>
+                                <div class="img-r100" style="background-image: url(assets/img/foto-perfil.png)"></div>
                                 <h4 class="margin-bottom-0">Dr. Juan Antonio Treviño Macías</h4>
                                 <b class="c-white">Director General</b>
                                 <br><br>
@@ -160,7 +175,7 @@
                 
 
         <section class="certi">
-                <div class="b-black padding-top-20">
+                <div class=" padding-top-20">
                         <div class="item-row-relative max-width">
                                 <div class="item-col-relative width-25p">
                                         <i class="logo-certi" style="background-image: url(assets/img/certi_1.png)"></i>
@@ -188,21 +203,20 @@
 
                                         <h2 class="c-purple"><b>!Agenda tu cita!</b></h2>
                                         <hr class="b-purple">
-                                        <h3 class="c-purple margin-bottom-0"><b>+52 (55) 6708 7001</b></h3>
+                                        <h3 class="c-purple margin-bottom-0"><b>01 (55) 5523 1077 </b></h3>
                                         <span class="fs-16">info@centrodecirugiaplastica.com</span>
                                         <br>
                                         <br>
                         
                         
                                         <div class="item-row t-center  c-dynamic">
-                                                <div class="item-col"> <a href="tel:5567087001"><div class="circle-r50 b-purple c-white"><i class="fas fa-3x fa-phone-square"></i></div></a></div>
-                                                <div class="item-col"> <a href="https://api.whatsapp.com/send?phone=5567087001&amp;text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20alguno%20de%20sus%20servicios." target="_blank"><div class="circle-r50 b-purple  c-white"><i class="fab fa-3x fa-whatsapp-square"></i></div></a></div>
+                                                <div class="item-col"> <a href="https://api.whatsapp.com/send?phone=5582542825&amp;text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20alguno%20de%20sus%20servicios." target="_blank"><div class="circle-r50 b-purple  c-white"><i class="fab fa-3x fa-whatsapp-square"></i></div></a></div>
                                                 <div class="item-col"><a  href="mailto:info@centrodecirugiaplastica.com?Subject=%C2%A1Hola!"><div class="circle-r50 b-purple  c-white"><i class="fas fa-3x fa-envelope-square"></i></div></a></div>
                                         </div>
                                 </div>
                         </div>
                         <div class="item-col-relative width-50p padding-20">
-                                <div class="max-width-350  padding-20  b-radius-4 t-center b-purple">
+                                <div class="max-width-350  padding-20  b-radius-4 t-center b-gradiente">
 
                                         <h2 class="c-white"><b>¡Visitanos!</b></h2>
 
@@ -243,7 +257,7 @@
                                                 Especialidad en Cirugía Plástica y Reconstructiva: 0030031
                                         </div>
                                         <div class="c-gray">
-                                                Cedula de especialidad: 5306
+                                                Certificación CMCPER: 5306
                                         </div>
                                         <div class="c-gray">
                                                 Registro cofepris: 000000000
@@ -263,6 +277,8 @@
                                         <a class="padding-20" href="https://instagram.com/ccplasticasc" target="_blank"><i class="fab c-white fa-2x fa-instagram cursor-pointer"></i></a> 
                                 </div>
                                 <div class="item-col-relative t-right padding-20 fs-10 width-50p">
+                                        <a href="https://aloux.mx"  class="c-white" target="_black">Aviso de Privacidad</a>
+                                        <br>
                                         <span class=" c-white">© Centro de Cirugia Plastica S.A. de C.V.</span>
                                         <br>
                                         <a href="https://aloux.mx" target="_black">Diseño y Desarrollo por Aloux</a>
@@ -280,9 +296,57 @@
                                 <p>{{servicio.desc}}</p>
                         </div>
                 </div>
-                <div class="card" ng-show="servicio.type === 'equipo'">
+
+
+
+                <div class="card" ng-show="servicio.type === 'preguntas'">
                         <i class="exit fas fa-lg fa-times cursor-pointer" ng-click="min()"></i>
                         <div class="img" ng-style="{'background-image': 'url(assets/img/'+servicio.imgs[0]+')'}"></div>
+                        <div class="info">
+                                <h2>{{servicio.title}}</h2>
+                                <div class="max-width padding-20">
+                                        <b>¿Dónde se realizan las cirugías?</b>
+                                        <br>
+                                        Los procedimientos quirúrgicos se realizan en nuestro Centro, el cual está debidamente regulado para realizar cirugías. Siendo esto un beneficio para nuestros pacientes al reducir costos operativos.
+                                        Sin embargo, si usted solicitara que se realizara su cirugía en otro centro hospitalario, lo podemos realizar igualmente.
+                                        <br><br>
+                                        <b>¿Quién realiza las cirugías?</b>
+                                        <br>
+                                        El Dr. Juan Antonio Treviño Macías, certificado por el Consejo Mexicano de Cirugía Plástica, Estética y Reconstructiva, junto con su equipo de médicos especialistas y profesionales de la salud.
+                                        <br><br>
+                                        <b>¿Es costosa una cirugía plástica?</b>
+                                        <br>
+                                        Realmente los costos de estos servicios no son tan elevados como muchas personas creen, sobre todo si toma en cuenta los gastos que realiza comúnmente para el mejoramiento de su persona en ropa, cosméticos, maquillaje y tratamientos “milagrosos”; muchas veces promovidos en los medios masivos de comunicación y que no se comparan de ninguna manera con la mejoría que le pueden brindar nuestros servicios.
+                                        Además, manejamos tarjetas de crédito y débito, y pago a meses sin intereses.
+                                        Tenemos también convenio con algunas empresas que otorgan créditos especiales para este fin.
+                                        <br><br>
+                                        <b>¿Es riesgoso someterse a una de estas cirugías?</b>
+                                        <br>
+                                        Toda cirugía implica ciertos riesgos. Sin embargo, habitualmente la incidencia y gravedad de los mismos es mínima, y en la mayoría de los casos, de fácil solución.
+                                        Cada cirugía tiene una incidencia de complicaciones estadísticamente registrada, las cuales le serán explicadas y se le darán por escrito desde la primera consulta para que tenga bases suficientes a la hora de tomar una decisión.
+                                        <br><br>
+                                        <b>¿Estas cirugías dejan huellas?</b>
+                                        <br>
+                                        Cuando estas cirugías se llevan a cabo por profesionales, las huellas sólo son observables por otros expertos, de tal forma que los resultados muestran una belleza natural y armoniosa.
+                                        Por otro lado, si se ha producido una herida inevitablemente habrá una cicatriz. Nuestro trabajo consiste en llevar armonía donde no la hay, colocando las huellas del proceso quirúrgico en lugares anatómicos donde puedan evolucionar mejor y pasar desapercibidas por el ojo no experto; o bien, donde puedan ser escondidas por las prendas de vestir habituales.
+                                        <br><br>
+                                        <b>¿Ofrecen alguna garantía de sus resultados?</b>
+                                        <br>
+                                        Su cirugía será realizada por un experto, sin embargo, nadie le puede garantizar que en su caso no tendrá complicación alguna. Por lo mismo se le informa sobre las estadísticas de complicaciones de la cirugía que solicite en su primera consulta, así como de sus posibles soluciones.
+                                        Nosotros le apoyaremos para la solución de las mismas en caso de presentarse.
+                                        <br><br>
+                                        <b>¿Qué pasos hay que seguir en caso de solicitar sus servicios?</b>
+                                        <br>
+                                        Puede llamarnos a los teléfonos (0155) 5523 1077 o (0155) 5687 0592 donde le atenderemos de Lunes a Viernes de 8:30 a 19:00 horas y los sábados de 9:00 a 13:00 horas.
+                                        Al acudir a su primera consulta, se le dará toda la información específica sobre la cirugía, los cuidados necesarios que debe seguir para la realización de la misma, así como los exámenes pre operatorios requeridos para su cirugía.
+                                </div>
+                        </div>
+                </div>
+                <div class="card" ng-show="servicio.type === 'equipo'">
+                        <i class="exit fas fa-lg fa-times cursor-pointer" ng-click="min()"></i>
+                        <br>
+                        <br>
+                        <div class="img-r100" ng-style="{'background-image': 'url(assets/img/'+servicio.imgs[0]+')'}"></div>
                         <div class="info t-center">
                                 <h2>{{servicio.title}}</h2>
                                 <h3>{{servicio.position}}</h3>
@@ -350,7 +414,7 @@
                         </div>
                         
                         <div class="item-col   padding-20 t-center width-25p align-top">
-                                <div class="card min-heigth-400" ng-click="full(servicio)">
+                                <div class="card min-heigth-400">
                                         <div class="info-middle" >
                                                 <h4>Dr. Gustavo Trejo Hernández.</h4>
                                                 <p class="docs">JEFE DE ANESTESIOLOGÍA</p>
@@ -364,7 +428,7 @@
                         </div>
 
                         <div class="item-col   padding-20 t-center width-25p align-top">
-                                <div class="card min-heigth-400" ng-click="full(servicio)">
+                                <div class="card min-heigth-400">
                                         <div class="info-middle" >
                                                 <h4>Dr. Alfredo Bobadilla Aguirre.</h4>
                                                 <p class="docs">SMEDICINA INTERNA Y CARDIOLOGÍA</p>
@@ -378,7 +442,7 @@
                         </div>
 
                         <div class="item-col   padding-20 t-center width-25p align-top">
-                                <div class="card min-heigth-400" ng-click="full(servicio)">
+                                <div class="card min-heigth-400">
                                         <div class="info-middle" >
                                                 <h4>Dr. Juan Antonio Treviño Macías.</h4>
                                                 <p class="docs">SERVICIO DE COSMIATRÍA Y REHABILITACIÓN</p>
