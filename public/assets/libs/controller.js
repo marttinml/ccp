@@ -1,5 +1,5 @@
 (function(){
-    angular.module('app', ['ui.carousel']).controller('Ctrl', function($scope) {
+    angular.module('app', []).controller('Ctrl', function($scope) {
 
 
         $(document).ready(function(){
@@ -7,7 +7,6 @@
                 if (this.hash !== "") {event.preventDefault();var hash = this.hash;$('html, body').animate({
                   scrollTop: $(hash).offset().top - 80
                 }, 800, function(){
-                    //window.location.hash = hash;
                 });
               }
             });
@@ -596,7 +595,6 @@
             $Jssor$.$AddEvent(window, "load", ScaleSlider1);
             $Jssor$.$AddEvent(window, "resize", ScaleSlider1);
             $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider1);
-            /*#endregion responsive code end*/
         };
 
 
@@ -606,7 +604,7 @@
                 {$Duration:1200,$Opacity:2}
               ];
             var jssor_1_options = {
-              $AutoPlay: 1,
+              $AutoPlay: 0,
               $Idle: 2000,
               $SlideshowOptions: {
                 $Class: $JssorSlideshowRunner$,

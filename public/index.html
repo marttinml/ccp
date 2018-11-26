@@ -54,12 +54,21 @@
         </header>
 
         <section class="home" id="home">
-                <div id="jssor_2" style="position:relative;margin:0 auto;top:0px;left:0px;width:1366px;height:850px;overflow:hidden;visibility:hidden;">
+                <div id="jssor_2" style="position:relative;margin:0 auto;top:0px;left:0px;width:1366px;height:900px;overflow:hidden;visibility:hidden;">
                         <!-- Loading Screen -->
-                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1366px;height:850px;overflow:hidden;">
+                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1366px;height:900px;overflow:hidden;">
                                 
-                                <div ng-repeat="item in ctrl.slides">
+                                <!-- <div ng-repeat="item in ctrl.slides">
                                         <img data-u="image" ng-src="{{item.image}}" />
+                                </div> -->
+                                <div >
+                                        <img data-u="image" src="assets/img/p1.png" />
+                                </div>
+                                <div >
+                                        <img data-u="image" src="assets/img/s2.jpg" />
+                                </div>
+                                <div >
+                                        <img data-u="image" src="assets/img/s3.jpg" />
                                 </div>
                         </div>
                         <div data-u="navigator" class="jssorb064" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
@@ -112,7 +121,6 @@
                 </div>
         </section>
         <section class="cirugias padding-bottom-100" id="cirugias">
-                <!-- <h1>Nuestros Servicios</h1> -->
                 <div class="filer-cats">
                         <ul>
                                 <li ng-repeat="item in categorias" ng-class="{active: item.active}" ng-click="changeFilter(categorias, item)"> 
@@ -135,7 +143,6 @@
                                         <div class="hover-link"><span>VER MÁS</span></div>
                                         <div class="info t-center">
                                                 <h4>{{servicio.title}}</h4>
-                                                <!-- <p class="docs">{{servicio.desc}}</p> -->
                                         </div>
                                 </div>
                         </div>
@@ -358,7 +365,7 @@
 
                         <div style="background-color: #e2e2e2">
                                 <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:640px;overflow:hidden;visibility:hidden;">
-                                        <!-- Loading Screen -->
+                     
                                         <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
                                             <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;"/>
                                         </div>
@@ -456,7 +463,7 @@
                 </div> 
                         
                 </div>
-        </div>
+        </div> 
 
 
 </body>

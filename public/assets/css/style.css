@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: manrope_bold;
     src: url(../fonts/manrope_bold.otf);
@@ -174,11 +173,11 @@ section.home{
     position:relative;
 }
 section.cirugias{
-    /* padding-top: 20px;  */
+    
 }
 section.us{
     background-color: rgb(51,0,153) ; 
-    background-image: linear-gradient(to  bottom left, rgb(51,0,153) , rgb(153,0,255)); /* Standard syntax (must be last) */
+    background-image: linear-gradient(to  bottom left, rgb(51,0,153) , rgb(153,0,255));
     color: rgba(255,255,255,1);
     padding: 20px; 
 }
@@ -197,17 +196,10 @@ section.contacto{
     width: 80px;
     height: 80px;
     border-radius: 40px;
-    /* background-color: rgb(255,255,255); */
-    /* color: rgb(51,0,153); */
     display: table-cell;
     vertical-align: middle;
     cursor: pointer;
 }
-/* .circle-r50:hover{
-    box-shadow: 0 0 20px rgba(0,0,0,.5);
-    background-color: rgb(51,0,153);
-    color: rgb(255,255,255);
-} */
 .carousel-prev{
     display: none;
 }
@@ -309,7 +301,7 @@ section.contacto{
     padding: 0px 16px;
 }
 .card .info h3{
-    /* text-align: left; */
+    
 }
 .card .info p{
     color: rgb(100,100,100);
@@ -413,8 +405,6 @@ ui-carousel{
 .filer-cats ul li.active{
     border-bottom: 1px solid rgb(51,0,153);
     color: rgb(51,0,153);
-    /* color: rgb(51,0,153); */
-    /* background-color: rgba(0,0,0,.3); */
 }
 
 
@@ -466,7 +456,6 @@ ui-carousel{
     background-size: cover;
 }
 .content-info{
-    /* background-color: rgba(255,255,255,.1); */
     border-radius: 4px;
     max-width: 1200px;
     margin: auto;
@@ -614,7 +603,6 @@ footer{
     margin: auto;
 }
 .mapa{
-    /* background-image: url(../img/mapa_dia.png); */
     background-image: url(../img/64.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -713,19 +701,6 @@ footer{
 .jssora051.jssora051dn {opacity:.5;}
 .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
 
-
-.jssorl-009-spin img {
-    animation-name: jssorl-009-spin;
-    animation-duration: 1.6s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-@keyframes jssorl-009-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
 .jssorb064 {position:absolute;}
 .jssorb064 .i {position:absolute;cursor:pointer;}
 .jssorb064 .i .b {fill:#000;fill-opacity:.5;stroke:#fff;stroke-width:400;stroke-miterlimit:10;stroke-opacity:0.5;}
@@ -819,3 +794,4 @@ footer{
         font-size: 14px;
     }
 }
+
