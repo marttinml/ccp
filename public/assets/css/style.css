@@ -110,7 +110,7 @@ nav ul a i{
     margin: 10px;
 }
 nav ul a:hover{
-    color: rgb(51,0,153);
+    color: rgb(51,0,102);
 }
 nav ul a.c-purple:hover{
     color: rgba(81,18,111,.8);
@@ -137,13 +137,13 @@ hr{
 
 }
 .c-purple{
-    color: rgb(51,0,153);
+    color: rgb(51,0,102);
 }
 .c-gray{
     color: rgb(150,150,150);
 }
 .b-purple{
-    background-color: rgb(51,0,153);
+    background-color: rgb(51,0,102);
 }
 .b-black{
     background-color: rgb(20,20,20);
@@ -176,8 +176,8 @@ section.cirugias{
     
 }
 section.us{
-    background-color: rgb(51,0,153) ; 
-    background-image: linear-gradient(to  bottom left, rgb(51,0,153) , rgb(153,0,255));
+    background-color: rgb(51,0,102) ; 
+    background-image: linear-gradient(to  bottom left, rgb(51,0,102) , rgb(153,0,255));
     color: rgba(255,255,255,1);
     padding: 20px; 
 }
@@ -188,8 +188,8 @@ section.contacto{
     padding: 20px;
 }
 .b-gradiente{
-    background-color: rgb(51,0,153) ; 
-    background-image: linear-gradient(to  bottom left, rgb(51,0,153) , rgb(153,0,255)); 
+    background-color: rgb(51,0,102) ; 
+    background-image: linear-gradient(to  bottom left, rgb(51,0,102) , rgb(153,0,255)); 
 }
 .b-white{background-color: rgba(255,255,255,.9);}
 .circle-r50{
@@ -403,8 +403,8 @@ ui-carousel{
     cursor: pointer;
 }
 .filer-cats ul li.active{
-    border-bottom: 1px solid rgb(51,0,153);
-    color: rgb(51,0,153);
+    border-bottom: 1px solid rgb(51,0,102);
+    color: rgb(51,0,102);
 }
 
 
@@ -435,7 +435,7 @@ ui-carousel{
     font-size: 14px;
 }
 .filer-sub ul li.active{
-    background-color: rgb(51,0,153);
+    background-color: rgb(51,0,102);
     color: rgb(255,255,255);
 }
 
@@ -476,7 +476,7 @@ footer{
     background-color: black;
     padding-top: 50px;
     padding: 20px;
-    border-top: 2px dashed rgb(51,0,153);
+    border-top: 2px dashed rgb(51,0,102);
     position: relative;
 }
 .manos{
@@ -503,7 +503,7 @@ footer{
     display: none
 }
 .menu-mobile i{
-    color: rgb(51,0,153);
+    color: rgb(51,0,102);
 }
 .menu-mobile i.ex{
     display: none;
@@ -535,7 +535,7 @@ footer{
     top: 80px;
     left: 0px;
     right: 0px;
-    background-color: rgb(51,0,153);
+    background-color: rgb(51,0,102);
     margin: 0;
     padding: 0;
     padding-top: 0px;
@@ -626,7 +626,7 @@ footer{
     padding: 0px 20px;
 }
 .full-screen .header-full i:hover{
-    color: rgb(51,0,153);
+    color: rgb(51,0,102);
 }
 .full-screen .header-full{
     box-shadow: none;
@@ -634,7 +634,7 @@ footer{
     text-align: right;
     padding: 30px;
     padding-right: 30px;
-    color: rgb(51,0,153);
+    color: rgb(51,0,102);
 }
 .full-screen{
     position: fixed;
@@ -672,7 +672,7 @@ footer{
     position: absolute;
     right: 30px;
     top: 30px;
-    color: rgb(51,0,153);
+    color: rgb(51,0,102);
     text-shadow: 0 0 30px rgba(255,255,255,1);
 }
 
@@ -705,7 +705,7 @@ footer{
 .jssorb064 .i {position:absolute;cursor:pointer;}
 .jssorb064 .i .b {fill:#000;fill-opacity:.5;stroke:#fff;stroke-width:400;stroke-miterlimit:10;stroke-opacity:0.5;}
 .jssorb064 .i:hover .b {fill-opacity:.8;}
-.jssorb064 .iav .b {fill:rgb(51,0,153);fill-opacity:.5;stroke:rgb(51,0,153);stroke-opacity:.7;stroke-width:400;}
+.jssorb064 .iav .b {fill:rgb(51,0,102);fill-opacity:.5;stroke:rgb(51,0,102);stroke-opacity:.7;stroke-width:400;}
 .jssorb064 .iav:hover .b {fill-opacity:.6;}
 .jssorb064 .i.idn {opacity:.3;}
 
