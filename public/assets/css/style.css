@@ -304,7 +304,7 @@ section.contacto{
     background-size: cover;
     background-position: center;
     transition: .5s ease-in-out;
-    background-size: 130% auto;
+    /* background-size: 130% auto; */
 }
 .card .info{
     padding: 0px 16px;
@@ -378,7 +378,7 @@ section.contacto{
     transition: .5s;
 }
 .card:hover .img{
-    background-size: 150% auto;
+    /* background-size:   */
     transition: 1s ease-in-out;
 }
 
