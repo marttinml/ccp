@@ -1,0 +1,5 @@
+<div class="overlay" ng-show="show" ng-click="hide()"></div>
+<div class="content" ng-class="{'animate-alert':show}">
+	<div class="header">{{title}} <i class="fa fa-times fa-lg" aria-hidden="true" ng-click="hide()"></i></div>
+	<ng-transclude></ng-transclude>
+</div>

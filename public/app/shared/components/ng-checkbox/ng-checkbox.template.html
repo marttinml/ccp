@@ -1,0 +1,6 @@
+<ul ng-class="{disable:disable}">
+	<li ng-repeat="item in options" ng-click="select(item)" ng-init="item.check = item.check || false">
+	<i class="fa fa-lg" ng-class="{'fa-square-o':!item.check, 'fa-check-square-o':item.check}"></i>
+	<span>{{item.name}}</span>
+	</li>
+</ul>

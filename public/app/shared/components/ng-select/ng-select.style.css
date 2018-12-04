@@ -1,0 +1,93 @@
+ng-select{
+	position: relative;
+	height: 41px;
+	display: block;
+}
+ng-select > .overlay{
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	background-color: rgba(0,0,0,0);
+	height: 100vh;
+}
+ng-select > div{
+	position: absolute;
+	width: 100%;
+	top: 10px;
+	height: 30px;
+	border: none;
+	text-align: left;
+	z-index: 1;
+	line-height: 2.2;
+	cursor: pointer;
+}
+ng-select > div > span{
+	
+}
+ng-select > div > i{
+	float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+
+}
+ng-select > ul{
+	width: 100%;
+	position: absolute;
+	top:41px;
+	right: 0;
+	left: 0;
+	z-index: 3;
+	height: auto;
+	box-shadow: 0 0 10px rgba(0,0,0,.5);
+	overflow: auto;
+	max-height: 200px;
+	border-radius: 2px;
+	background-color: rgb(255,255,255);
+}
+ng-select > ul > li{
+	height: 30px;
+	padding: 10px;
+	padding-left: 20px;
+	line-height: -.5;
+	cursor: pointer;
+}
+ng-select > ul > li:hover{
+	background-color: rgb(245,245,245);
+}
+ng-select > hr{
+	position: absolute;
+	top:40px;
+	left: 0;
+	width: 100%;
+	border: none;
+	background-color: transparent;
+	border-bottom: 1px solid rgb(150,150,150);
+	margin: 0;
+}
+ng-select > hr.optional{
+	border-bottom: 1px dashed rgb(150,150,150);
+}
+ng-select > title{
+	position: absolute;
+	top:5px;
+	left: 0;
+	text-align: left;
+	font-size: 10px;
+	display: block;
+	z-index: 2;
+	color: rgb(150,150,150);
+}
+ng-select > title.empty{
+	top:15px;
+	font-size: 14px;
+}
+ng-select > .disable{
+	color: rgb(200,200,200);
+	cursor: default;
+}
+ng-select > hr.disable{
+	border-color: rgb(200,200,200);
+}

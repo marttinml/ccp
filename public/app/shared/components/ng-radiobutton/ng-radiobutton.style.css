@@ -1,0 +1,23 @@
+ng-radiobutton{
+
+}
+ng-radiobutton > ul{
+	
+}
+
+ng-radiobutton > ul.disable{
+	color: rgb(200,200,200);
+}
+
+ng-radiobutton > ul > li{
+	cursor: pointer;
+}
+
+ng-radiobutton > ul.disable > li{
+	cursor: default;
+}
+
+ng-radiobutton > ul > li > i{
+    margin: 5px 5px 5px auto;
+    width: 20px;
+}

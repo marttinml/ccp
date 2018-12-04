@@ -1,0 +1,47 @@
+ng-input{
+	position: relative;
+	height: 41px;
+	display: block;
+}
+ng-input > input{
+	position: absolute;
+	width: 100%;
+	top: 10px;
+	height: 30px;
+	border: none;
+	text-align: left;
+	z-index: 1;
+}
+ng-input > hr{
+	position: absolute;
+	top:40px;
+	left: 0;
+	width: 100%;
+	border: none;
+	background-color: transparent;
+	border-bottom: 1px solid rgb(150,150,150);
+	margin: 0;
+}
+ng-input > hr.optional{
+	border-bottom: 1px dashed rgb(150,150,150);
+}
+ng-input > title{
+	position: absolute;
+	top:5px;
+	left: 0;
+	text-align: left;
+	font-size: 10px;
+	display: block;
+	z-index: 2;
+	color: rgb(150,150,150);
+}
+ng-input > title.empty{
+	top:15px;
+	font-size: 14px;
+}
+ng-input > .disable{
+	color: rgb(200,200,200);
+}
+ng-input > hr.disable{
+	border-color: rgb(200,200,200);
+}

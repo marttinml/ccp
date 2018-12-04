@@ -536,6 +536,7 @@ footer{
     left: 0px;
     right: 0px;
     background-color: rgb(51,0,102);
+    background-image: linear-gradient(to bottom left, rgb(51,0,102) , rgb(153,0,255));
     margin: 0;
     padding: 0;
     padding-top: 0px;
@@ -547,13 +548,13 @@ footer{
     display: block;
     padding: 10px 25px;
     letter-spacing: 4px;
-    font-size: 30px;
+    font-size: 24px;
     text-align: center;
 }
 
 
 .menu-mobile ul li.phone{
-    font-size: 32px;
+    font-size: 26px;
 }
 .menu-mobile ul li a{
     color: rgb(255,255,255);
@@ -738,6 +739,15 @@ footer{
     .width-25p{
         width: 100%;
         display: block;
+    }
+    .width-25p.certif{
+        width: 24%;
+        display: inline-block;
+    }
+    .logo-certi{
+        height: 70px;
+        width: 70px;
+        border-radius: 35px;
     }
     .t-left, .t-right{
         text-align: center;

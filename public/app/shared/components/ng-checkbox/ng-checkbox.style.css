@@ -1,0 +1,23 @@
+ng-checkbox{
+
+}
+ng-checkbox > ul{
+	
+}
+
+ng-checkbox > ul.disable{
+	color: rgb(200,200,200);
+}
+
+ng-checkbox > ul > li{
+	cursor: pointer;
+}
+
+ng-checkbox > ul.disable > li{
+	cursor: default;
+}
+
+ng-checkbox > ul > li > i{
+    margin: 5px 5px 5px auto;
+    width: 20px;
+}

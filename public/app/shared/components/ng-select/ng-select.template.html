@@ -1,0 +1,9 @@
+<div class="overlay" ng-show="focus" ng-click="selectBlur()"></div>
+<title ng-click="selectBlur()" ng-class="{empty:empty, disable:disable}">{{placeholder}}</title>
+
+<!-- <input focus-me="focus" ng-disabled="disable" type="text" ng-class="{disable:disable}" ng-model="model" ng-focus="inputFocus()" ng-blur="inputBlur()"> -->
+<div ng-click="selectFocus()" ng-class="{disable:disable}"><span>{{model.name}}</span><i class="fa fa-chevron-up" ng-class="{'fa-chevron-down':!focus}"></i></div>
+<ul ng-show="focus">
+	<li ng-click="select(item)" ng-repeat="item in options">{{item.name}}</li>
+</ul>
+<hr ng-class="{optional:optional, disable:disable}"/>
