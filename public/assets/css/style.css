@@ -480,7 +480,7 @@ footer{
     position: relative;
 }
 .manos{
-    background-image: url(../img/manos.png);
+    /* background-image: url(../img/manos.png); */
     background-position: center;
     background-size: auto 100% ;
     background-repeat: no-repeat;
