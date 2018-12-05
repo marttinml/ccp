@@ -1,5 +1,5 @@
 {
-    "promociones": [ { "img": "p1.png" }, { "img": "p2.png" }, { "img": "p3.jpg" }],
+    "promociones": [ { "img": "p1.jpeg" }, { "img": "p2.png" }, { "img": "p3.jpg" }],
     "categorias": [
         {
             "key": "todo",          "name": "Todo", "active": true
