@@ -727,6 +727,29 @@ footer{
     box-shadow: 0 0 10px rgba(0,0,0,.5);
 }
 
+
+.terminos{
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.before-after{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    display: block;
+    height: 300px;
+    background-repeat: no-repeat;
+    opacity: .3;
+    transition: .3s;
+    background-size: 100%;
+}
+.before-after:hover{
+    opacity: 1;
+    transition: .3s;
+}
 @media screen and (max-width: 1000px) {
     .menu-mobile{
         display: block;

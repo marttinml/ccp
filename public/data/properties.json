@@ -1,5 +1,11 @@
 {
-    "promociones": [ { "img": "p1.jpeg" }, { "img": "p2.png" }, { "img": "p3.jpg" }],
+    "promociones": [ 
+        { "img": "p1-min.png", "terminos": "xcndcmwkcnkjedn ewv rwmv kemfkvcmero mefvmeori xcndcmwkcnkjedn ewv rwmv kemfkvcmero mefvmeori xcndcmwkcnkjedn ewv rwmv kemfkvcmero mefvmeori xcndcmwkcnkjedn ewv rwmv kemfkvcmero mefvmeori jeriov jmeroijv ierjm ioejivojeriojri jri jriej ierj ioerj" }, 
+        { "img": "p2-min.png" }, 
+        { "img": "p3-min.png" },
+        { "img": "p4-min.png" },
+        { "img": "p5-min.png" }
+    ],
     "categorias": [
         {
             "key": "todo",          "name": "Todo", "active": true
@@ -31,19 +37,22 @@
             "categorias": ["todo","cirugiaplastica","rostro"],
             "title": "Cirugía Facial Múltiple",
             "desc": "En este caso, la cirugía abarca desde la corrección de cicatrices y lesiones desagradables (quistes, lunares, y otras), así como cirugías reconstructivas y/o estéticas de las diferentes partes del rostro. Tal es el caso de la frecuente asociación de la rinoplastia con una o más cirugías, como la extirpación de bolas adiposas de Bichat, aumento y modelado de mentón, cirugía de aumento y remodelado de pómulos, remodelado de orejas en asa y otras. <br> Este mismo concepto se aplica a cualquier edad, en los que se pueden efectuar junto con el lifting facial, cirugías estéticas y/o reconstructivas para corrección de deformidades patológicas en los diferentes órganos faciales.",
-            "imgs": ["s1.jpg"]
+            "imgs": ["s1.jpg"],
+            "imgsBeforetoAfter": ["cfm_001.jpg","cfm_006a.jpg"]
         },
         {
             "categorias": ["todo","cirugiaplastica","rostro"],
             "title": "Cirugía Facial Antiedad",
             "desc": "Se trata del clásico Lifting o levantamiento y reacomodo de todas las estructuras faciales, que da como resultado una apariencia más fresca y juvenil, y que es, además de todo, una gran oportunidad para lograr cambios artísticamente armoniosos con los diferentes componentes faciales, característica dada por las cualidades del cirujano. Pudiendo también corregir alteraciones funcionales que se presentan como parte del fenómeno de envejecimiento. Este tipo de cirugía se puede realizar por regiones o cara completa, pudiendo ser: AREA SUPERIOR DEL ROSTRO: estiramiento de frente, levantamiento y remodelado de cejas y/o párpados. AREA INFERIOR DEL ROSTRO: éste abarca levantamiento de pómulos, mejillas, papada, pudiendo extenderse hasta el cuello.",
-            "imgs": ["s6.jpg"]
+            "imgs": ["s1.jpg"],
+            "imgsBeforetoAfter": ["cfa_006b.jpg"]
         },
         {
             "categorias": ["todo","cirugiaplastica","rostro"],
             "title": "Párpados y/o Cejas",
             "desc": "La cirugía de los párpados puede ser solo de los inferiores, superiores, o ambos; con la ventaja de que esta cirugía se puede realizar con anestesia local, siendo una cirugía totalmente ambulatoria. Usualmente se complementa con la cirugía de levantamiento de las cejas para corrección de deformidades o de las huellas de envejecimiento, dándole un aspecto más joven y fresco a los ojos, en estos casos es muy importante el reposicionar las cejas dado que de esto depende la corrección de la expresión de cansancio, así como el hecho de lograr una mayor armonía y belleza. O bien, se puede realizar cirugía de párpados y/o las cejas de manera independiente, según las necesidades del paciente, no solo en rostros envejecidos, sino también en casos en que la modificación de estos elementos se indica solo para destacar la belleza.",
-            "imgs": ["s7.jpg"]
+            "imgs": ["s7.jpg"],
+            "imgsBeforetoAfter": ["bc_01-1.jpg","bc_01-2.jpg"]
         },
         {
             "categorias": ["todo","cirugiaplastica","rostro"],
@@ -55,19 +64,22 @@
             "categorias": ["todo","cirugiaplastica","rostro"],
             "title": "Liposucción Facial",
             "desc": "Es una pequeña cirugía mediante la cual podemos remodelar todas las áreas faciales, y auxiliándonos con la lipotransferencia (lipoinyección), podemos reducir algunas áreas y/o aumentar otras, siempre buscando la armonía que redunda en una apariencia más bella.",
-            "imgs": ["s3.jpg"]
+            "imgs": ["s3.jpg"],
+            "imgsBeforetoAfter": ["lf_002.jpg"]
         },
         {
             "categorias": ["todo","cirugiaplastica","rostro"],
             "title": "Orejas",
             "desc": "Con esta cirugía se puede corregir cualquier deformidad de las orejas, ya sea en tamaño, orientación o forma, dependiendo las necesidades de cada paciente. Especialmente indicada en edades tempranas debido al bullying del cual son víctimas los niños que muestran esta característica, pues frecuentemente observamos que cuando su corrección se deja para etapas más tardías de la vida, ya ha dejado una cicatriz emocional que afecta la autoestima de las personas la cuál es más difícil de tratar.",
-            "imgs": ["s9.jpg"]
+            "imgs": ["s9.jpg"],
+            "imgsBeforetoAfter": ["orejas_002b.jpg"]
         },
         {
             "categorias": ["todo","cirugiaplastica","rostro"],
             "title": "Nariz",
             "desc": "Desde el nacimiento la zona más importante de interrelación social es el triángulo formado por los ojos, nariz y boca, al ser la nariz el centro de la cara, estamos hablando de uno de los mayores puntos de belleza facial, además de tratarse de unos de los órganos más importantes para la salud integral. Es quizás la más socorrida de las cirugías de embellecimiento, desgraciadamente en muchas ocasiones se descuida el aspecto funcional de la nariz. Muchos de los pacientes que solicitan cirugía estética tienen estos problemas de función nasal sin saberlo, y muchas de las veces ignorados o mal diagnosticados, un gran porcentaje logran la curación corrigiendo la anatomía nasal, brindando una mejor apariencia y armonía al mismo tiempo. Aunque a veces es muy ignorado en el caso de la nariz, la función y la belleza van de la mano, por lo cual te recomendamos que nadie toque tu nariz si no es un experto, nosotros te ofrecemos una intervención estética y funcional a la vez.",
-            "imgs": ["s4.jpg"]
+            "imgs": ["s4.jpg"],
+            "imgsBeforetoAfter": ["nariz_005.jpg","nariz_014.jpg"]
         },
         {
             "categorias": ["todo","cirugiaplastica","rostro"],
@@ -79,19 +91,22 @@
             "categorias": ["todo","cirugiaplastica","rostro"],
             "title": "Labios",
             "desc": "Dependiendo de tus necesidades, podemos adelgazarlos, engrosarlos o cambiar su proyección ya sea con cirugía o infiltración de materiales adecuados. También podemos tratarlos quirúrgicamente, disminuyendo la altura del labio superior o disminuyendo surcos y arrugas, así como los pliegues nasolabiales con su liberación quirúrgica e infiltración de materiales adecuados o lipotransferencia.",
-            "imgs": ["s4.jpg"]
+            "imgs": ["s4.jpg"],
+            "imgsBeforetoAfter": ["labios_001.jpg","labios_004.jpg"]
         },
         {
             "categorias": ["todo","cirugiaplastica","rostro"],
             "title": "Aumento de Pómulos",
             "desc": "Esta es una región que al igual que la del mentón constituyen zonas de alto potencial estético y con mucha frecuencia no son tomadas en cuenta. Esta cirugía se puede realizar por diferentes métodos dando como resultado un realce de los rasgos del tercio medio facial, sin dejar cicatrices visibles y logra una armonía que brinda una apariencia más bella.",
-            "imgs": ["s4.jpg"]
+            "imgs": ["s4.jpg"],
+            "imgsBeforetoAfter": ["pomulos_002.jpg"]
         },
         {
             "categorias": ["todo","cirugiaplastica","rostro"],
             "title": "Bolas Adiposas de Bichat",
             "desc": "Esta cirugía es muy concurrida por actores y mucho más aún por modelos dado el grado de sofisticación que adquiere el rostro mediante la misma, ya que disminuye considerablemente el volumen de las mejillas y se realzan favorablemente los pómulos. Estas son depósitos grasos localizados en las mejillas, que cuando están muy desarrolladas dan un aspecto característico. Se pueden retirar mediante cirugía intra oral que no deja cicatrices visibles, dando como resultado un refinamiento de los rasgos faciales. Es un procedimiento efectuado con anestesia local, totalmente ambulatorio, con la ventaja de que ese tejido graso puede ser transferido a otras áreas del rostro.",
-            "imgs": ["s4.jpg"]
+            "imgs": ["s4.jpg"],
+            "imgsBeforetoAfter": ["bichat_002.jpg"]
         },
         {
             "categorias": ["todo","cirugiaplastica","rostro"],
@@ -109,6 +124,13 @@
             "categorias": ["todo","cirugiaplastica","rostro"],
             "title": "Papada",
             "desc": "Generalmente esta cirugía acompaña a la cirugía de mentón para lograr un remodelado total de la región, dándole mayor realce y refinamiento a la parte inferior del rostro y a la parte superior del cuello, brindando un aspecto más juvenil y armonioso. El remodelado de esta zona se realiza mediante liposucción o resección directa con reparación muscular, según el caso.",
+            "imgs": ["s4.jpg"],
+            "imgsBeforetoAfter": ["cfm_006b.jpg"]
+        },
+        {
+            "categorias": ["todo","cirugiaplastica","rostro"],
+            "title": "Feminización Facial",
+            "desc": "Cada día aumenta la demanda de este tipo de cirugías, en estas se busca feminizar los rasgos faciales según sea la necesidad en cada paciente, redondeando y cambiando características de las diferentes zonas faciales, como áreas de la frente, los pómulos, mentón, nariz, labios, etc. Para ello nos auxiliamos de diferentes técnicas según las características y necesidades de cada paciente. Como por ejemplo,  podemos cambiar las características de la frente, los arcos superciliares y el entrecejo, afinar el mentón, modificar los labios, armonizar y feminizar la nariz entre otros.",
             "imgs": ["s4.jpg"]
         },
         {
@@ -121,13 +143,16 @@
             "categorias": ["todo","cirugiaplastica","cuerpo"],
             "title": "Prótesis Mamarias",
             "desc": "Podemos mejorar la forma, tamaño y posición de tu busto. Se aumentan mediante la colocación de prótesis mamarias internas de múltiples formas y volúmenes.Para la determinación del volumen que elijas contamos con probadores especiales que te darán una perspectiva real de como lucirás con tu cirugía. Además, cuentas con la sugerencia del cirujano en cuanto al tamaño de los implantes basado en tus características y medidas. Siendo, además, respetuosos en cuanto al volumen que tú elijas.",
-            "imgs": ["s4.jpg"]
+            "imgs": ["s4.jpg"],
+            "imgsBeforetoAfter": ["pm_25-1-1.JPG", "pm_25-2.JPG"]
         },
         {
             "categorias": ["todo","cirugiaplastica","cuerpo"],
             "title": "Pexia o Levantamiento Mamario",
             "desc": "Esta cirugía levanta desde un busto pequeño y caído o con una forma desagradable, hasta aquellos  bustos que han sufrido los efectos que los embarazos han provocado sobre las mamas, corrigiéndose en ambos casos los problemas de flacidez y el efecto visual del envejecimiento corporal. Este tipo de cirugía se puede realizar con o sin aumento mediante colocación de prótesis mamarias.",
-            "imgs": ["s4.jpg"]
+            "imgs": ["s4.jpg"],
+            "imgsBeforetoAfter": ["52.jpg", "53jpg.jpg"]
+            
         },
         {
             "categorias": ["todo","cirugiaplastica","cuerpo"],
@@ -139,7 +164,8 @@
             "categorias": ["todo","cirugiaplastica","cuerpo"],
             "title": "Pectorales",
             "desc": "Esta cirugía nos permite mejorar el aspecto del área pectoral en los hombres, produciendo un aspecto musculoso al tórax masculino mediante la colocación de prótesis pectorales internas, cuyo tamaño se determinará según las medidas de tu región corporal.",
-            "imgs": ["s4.jpg"]
+            "imgs": ["s4.jpg"],
+            "imgsBeforetoAfter": ["pecto_001.jpg"]            
         },
         {
             "categorias": ["todo","cirugiaplastica","cuerpo"],
@@ -151,7 +177,9 @@
             "categorias": ["todo","cirugiaplastica","cuerpo"],
             "title": "Abdomen (Dermolipectomía abdominal)",
             "desc": "También conocida como abdominoplastia y popularizada como el famoso “tummy tuck” entre las artistas, es una cirugía ideal para las mujeres que ya tuvieron hijos y desean recobrar firmeza, tono muscular de la pared abdominal y refinamiento de la cintura. A través de la experiencia hemos desarrollado modificaciones a las técnicas utilizadas actualmente bajo las cuales hemos logrado resultados asombrosos, nuestras pacientes sometidas a esta cirugía, llegan a tener una mejor silueta que incluso antes de haber tenido hijos. Este procedimiento no es exclusivo de las mujeres que han cursado embarazos, también se realiza en hombres y mujeres que han sufrido pérdidas masivas de peso, o en aquellas personas que muestran alteraciones en piel y músculos del área abdominal de manera secundaria al paso del tiempo. Al igual que todas las cirugías plásticas esta debe de ser personalizada, no es adecuado efectuar el mismo diseño en todos los pacientes, por lo que su diseño y extensión podrá abarcar desde incisiones pequeñas (minilipectomía) hasta mayores extensiones llegando incluso hasta la espalda (torso-plastia o dermolipectomía abdominal circular).",
-            "imgs": ["s4.jpg"]
+            "imgs": ["s4.jpg"],
+            "imgsBeforetoAfter": ["caso19.jpg"]
+            
         },
         {
             "categorias": ["todo","cirugiaplastica","cuerpo"],
@@ -163,19 +191,22 @@
             "categorias": ["todo","cirugiaplastica","cuerpo"],
             "title": "Glúteos",
             "desc": "Este procedimiento es el que brinda los resultados más predecibles, seguros y confiables, en cuanto al aumento y remodelado de los glúteos. Los glúteos se pueden aumentar de tamaño a través de una cirugía en la que se colocan prótesis internas, mejorando su apariencia de manera notoria, dejando una cicatriz muy poco visible situada en la parte superior del pliegue inter glúteo, que además se cubre fácilmente con cualquier prenda de ropa interior. Puede realizarse tanto en hombres como en mujeres. También es posible disminuirlos y remodelarlos a través de liposucción, o pueden levantarse en caso de que los glúteos se encuentren caídos, a través de la técnica quirúrgica de pexia o levantamiento glúteo que llevamos a cabo en nuestro Centro de Cirugía Plástica.",
-            "imgs": ["s4.jpg"]
+            "imgs": ["s4.jpg"],
+            "imgsBeforetoAfter": ["glu_002.jpg"]
         },
         {
             "categorias": ["todo","cirugiaplastica","cuerpo"],
             "title": "Piernas",
             "desc": "Podemos remodelar las piernas y/o las pantorrillas mediante liposucción y/o lipotransferencia, o también con la colocación de prótesis internas de muslo o pantorrilla, o en los casos que se requiera, realizamos la Dermolipectomía de los excesos de la piel.",
-            "imgs": ["s4.jpg"]
+            "imgs": ["s4.jpg"],
+            "imgsBeforetoAfter": ["piernas_muslos.jpg","piernas_pantorrillas.jpg"]
         },
         {
             "categorias": ["todo","cirugiaplastica","cuerpo"],
             "title": "Liposucción o Lipoescultura",
             "desc": "Cirugía mediante la cual podemos remodelar casi cualquier parte del cuerpo, manejando adecuada y estratégicamente la presencia y distribución de grasa, desde el área de la papada, hasta la región del tobillo. Esta cirugía ha venido a revolucionar los resultados de los procedimientos para mejorar el contorno corporal, auxiliándose de la lipotransferencia, lo cual nos permite mediante unas cuantas pequeñas y discretas cicatrices modificar casi cualquier parte del cuerpo y del rostro. Esculpiendo así la figura, disminuyendo o aumentando los volúmenes dados por el tejido graso obteniendo así una gran influencia sobre las formas faciales y corporales, auxiliándonos también con el marcado de pliegues que se pueden colocar de manera estratégica para realzar la musculatura y formas de las diferentes regiones. Contamos con la experiencia de haber iniciado estos procedimientos desde el año 1985, obteniendo excelentes resultados. Logramos reducciones de entre 2 a 5 pulgadas o más en el talle, dependiendo de las características de cada paciente.",
-            "imgs": ["s4.jpg"]
+            "imgs": ["s4.jpg"],
+            "imgsBeforetoAfter": ["lipo_002.jpg","lipo_005.jpg"]
         },
         {
             "categorias": ["todo","cirugiaplastica","cuerpo"],
@@ -199,7 +230,8 @@
             "categorias": ["todo","cirugiaplastica","cicatrices"],
             "title": "Cicatrices inestéticas",
             "desc": "Estas pueden causar problemas tanto en la función de diferentes partes u órganos, como en la apariencia física, causando así además problemas de tipo emocional y social, que suelen afectar las relaciones inter-personales de los individuos. Cualquier cicatriz puede ser mejorada mediante el tratamiento de un experto. Para ello te ofrecemos diferentes alternativas, acorde a tus necesidades, esto puede implicar la cirugía plástica en los casos indicados y/o diferentes tratamientos médico cosmetológicos. Tales como: peelings químicos o mecánicos, tratamientos enzimáticos, aparatología, etc.",
-            "imgs": ["s4.jpg"]
+            "imgs": ["s4.jpg"],
+            "imgsBeforetoAfter": ["cica_001.jpg"]
         },
         {
             "categorias": ["todo","cirugiaplastica","lesiones"],

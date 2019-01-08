@@ -29,23 +29,6 @@
 
 </header>
 
-<!-- <section class="cirugias " id="top3">
-	<h2></h2>
-	<h1>TOP 3</h1>
-
-	<div class="item-row-relative max-width">
-			<div class="item-col-relative padding-20 width-33p" ng-repeat="servicio in top3">
-					<div class="card" ng-click="full(servicio)">
-							<div class="img" ng-style="{'background-image': 'url(assets/img/'+servicio.imgs[0]+')'}"></div>
-							<div class="hover-link"><span>VER MÁS</span></div>
-							<div class="info t-center">
-									<h2>{{servicio.title}}</h2>
-									<p class="docs">{{servicio.desc}}</p>
-							</div>
-					</div>
-			</div>
-	</div>
-</section> -->
 
 <section class="home" id="home">
     <div id="jssor_2" style="position:relative;margin:0 auto;top:0px;left:0px;width:1366px;height:900px;overflow:hidden;visibility:hidden;">
@@ -53,17 +36,8 @@
             <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1366px;height:900px;overflow:hidden;">
                     
                     <div ng-repeat="item in promociones">
-                            <img data-u="image" ng-src="data/{{item.img}}" />
+							<img data-u="image" ng-src="data/promociones/{{item.img}}" />
                     </div>
-                    <!-- <div >
-                            <img data-u="image" src="assets/img/p1.png" />
-                    </div>
-                    <div >
-                            <img data-u="image" src="assets/img/p2.png" />
-                    </div>
-                    <div >
-                            <img data-u="image" src="assets/img/s3.jpg" />
-                    </div> -->
             </div>
             <div data-u="navigator" class="jssorb064" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
                     <div data-u="prototype" class="i" style="width:16px;height:16px;">
@@ -88,7 +62,7 @@
 </section>
 
 <section class="us">
-	<h1>BIENVENIDO</h1>
+	<h1>Bienvenidos</h1>
 	<div class="content-info">
 			<p id="contentInfo">
 					En el Centro de Cirugía Plástica le ofrecemos atención personalizada con cordialidad, calidez y calidad humana, brindándole la confianza, seguridad y certeza de que obtendrá un servicio óptimo con buenos resultados.
@@ -116,7 +90,7 @@
 	<div class="item-row-relative max-width">
 			<div class="item-col-relative padding-20 width-33p" ng-repeat="servicio in filteredServices = (servicios | filter:search:strict)">
 					<div class="card" ng-click="full(servicio)">
-							<div class="img" ng-style="{'background-image': 'url(assets/img/'+servicio.imgs[0]+')'}"></div>
+							<div class="img" ng-style="{'background-image': 'url(data/servicios/'+servicio.imgs[0]+')'}"></div>
 							<div class="hover-link"><span>VER MÁS</span></div>
 							<div class="info t-center">
 									<h4>{{servicio.title}}</h4>
@@ -272,18 +246,25 @@
 </footer>
 
 <div class="full-screen" ng-class="{'full-active': fullActive}">
-	<div class="card" ng-show="!servicio.type">
+	<div class="card" ng-if="!servicio.type">
 			<i class="exit fas fa-lg fa-times cursor-pointer" ng-click="min()"></i>
-			<div class="img" ng-style="{'background-image': 'url(assets/img/'+servicio.imgs[0]+')'}"></div>
+			<div class="img" ng-style="{'background-image': 'url(data/servicios/'+servicio.imgs[0]+')'}"></div>
 			<div class="info t-center">
 					<h2>{{servicio.title}}</h2>
 					<p>{{servicio.desc}}</p>
+
+					<br>
+					<h2 ng-show="servicio.imgsBeforetoAfter">Antes - Después</h2>
+					<ul>
+						<li class="before-after" ng-repeat="img in servicio.imgsBeforetoAfter" ng-style="{'background-image': 'url(data/beforeAfter/'+img+')'}">
+						</li>
+					</ul>
 			</div>
 	</div>
 
 
 
-	<div class="card" ng-show="servicio.type === 'preguntas'">
+	<div class="card" ng-if="servicio.type === 'preguntas'">
 			<i class="exit fas fa-lg fa-times cursor-pointer" ng-click="min()"></i>
 			<div class="img" ng-style="{'background-image': 'url(assets/img/'+servicio.imgs[0]+')'}"></div>
 			<div class="info">
