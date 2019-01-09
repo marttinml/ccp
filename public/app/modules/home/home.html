@@ -162,7 +162,7 @@
 							<h2 class="c-purple">!Agenda tu cita!</h2>
 							<hr class="b-purple">
 							<h3 class="c-purple margin-bottom-0">01 (55) 5523 1077</h3>
-							<span class="fs-16">info@centrodecirugiaplastica.com</span>
+							<span class="fs-16">informes@centrodecirugiaplastica.com</span>
 							<br>
 							<br>
 			
@@ -246,7 +246,7 @@
 </footer>
 
 <div class="full-screen" ng-class="{'full-active': fullActive}">
-	<div class="card" ng-if="!servicio.type">
+	<div class="card" ng-show="!servicio.type">
 			<i class="exit fas fa-lg fa-times cursor-pointer" ng-click="min()"></i>
 			<div class="img" ng-style="{'background-image': 'url(data/servicios/'+servicio.imgs[0]+')'}"></div>
 			<div class="info t-center">
@@ -255,8 +255,9 @@
 
 					<br>
 					<h2 ng-show="servicio.imgsBeforetoAfter">Antes - Después</h2>
-					<ul>
-						<li class="before-after" ng-repeat="img in servicio.imgsBeforetoAfter" ng-style="{'background-image': 'url(data/beforeAfter/'+img+')'}">
+					<ul class="margin-bottom-20">
+						<li class="before-after" ng-repeat="img in servicio.imgsBeforetoAfter">
+							<img ng-src="data/beforeAfter/{{img}}" style="width:100%;" alt="">
 						</li>
 					</ul>
 			</div>
@@ -264,7 +265,7 @@
 
 
 
-	<div class="card" ng-if="servicio.type === 'preguntas'">
+	<div class="card" ng-show="servicio.type === 'preguntas'">
 			<i class="exit fas fa-lg fa-times cursor-pointer" ng-click="min()"></i>
 			<div class="img" ng-style="{'background-image': 'url(assets/img/'+servicio.imgs[0]+')'}"></div>
 			<div class="info">

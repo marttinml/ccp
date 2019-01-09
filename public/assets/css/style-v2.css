@@ -215,6 +215,9 @@ section.contacto{
 .margin-bottom-0{
     margin-bottom: 0;
 }
+.margin-bottom-20{
+    margin-bottom: 20px;
+}
 .carousel-dots {
     bottom: 20px!important;
     z-index: 20;
@@ -740,7 +743,7 @@ footer{
     max-width: 500px;
     margin: auto;
     display: block;
-    height: 300px;
+    height: auto;
     background-repeat: no-repeat;
     opacity: .3;
     transition: .3s;
@@ -794,8 +797,8 @@ footer{
         font-size: 14px;
     }
     .logo-certi{
-        height: 50px;
-        width: 50px;
+        height: 70px;
+        width: 70px;
         border-radius: 25px;
     }
     .logo-title{

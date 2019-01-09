@@ -7,9 +7,10 @@
         $scope.promociones = [];
         $scope.servicios = [];
         $scope.categorias = [];
+        $scope.filteredServices = [];
         $scope.startIndex = Number($routeParams.index) || 1;
 
-        $http.get("../../../data/properties.json").success(function (data) { 
+        $http.get("../../../data/properties-v1.json").success(function (data) { 
             $scope.promociones = data.promociones; 
             $scope.servicios = data.servicios;
             $scope.categorias = data.categorias;
@@ -141,8 +142,8 @@
               ];
             var jssor_1_options = {
                 $StartIndex : $scope.startIndex - 1,
-              $AutoPlay: 0,
-              $Idle: 2000,
+              $AutoPlay: 1,
+              $Idle: 5000,
               $SlideshowOptions: {
                 $Class: $JssorSlideshowRunner$,
                 $Transitions: jssor_1_SlideshowTransitions,
