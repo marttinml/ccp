@@ -1,19 +1,28 @@
 /*global angular*/
 (function () {
 
-    var controller = function ($scope, $rootScope, $routeParams, $http) {
+    var controller = function ($scope, $rootScope, $routeParams, $http, $sce) {
 
-
+        $( document ).ready(function() {
+            setTimeout(function(){
+                var el = document.getElementById('css3-spinner');
+                angular.element(el).fadeOut(300, function(){
+                    angular.element(el).remove();
+                });
+            },1000);
+        });
         $scope.promociones = [];
         $scope.servicios = [];
         $scope.categorias = [];
         $scope.filteredServices = [];
         $scope.startIndex = Number($routeParams.index) || 1;
 
-        $http.get("../../../data/properties-v1.json").success(function (data) { 
+        $http.get("../../../data/properties-v2.json").success(function (data) { 
             $scope.promociones = data.promociones; 
             $scope.servicios = data.servicios;
             $scope.categorias = data.categorias;
+            $scope.changeFilter($scope.categorias, $scope.categorias[0]);
+
         }).error(function (data) {console.log("there was an error"); });
        
         $(document).ready(function(){
@@ -29,7 +38,7 @@
         $scope.equipo = {
             title: 'Dr. Juan Antonio Treviño Macías',
             position: 'Director General',
-            desc: 'Especialista en Cirugía plástica. Cédula profesional No.0030031. Certificado por el Consejo Mexicano de Cirugía Plástica, Estética y Reconstructiva. Certificado No.836. Miembro de la Asociación Mexicana de Cirugía Plástica Estética y Reconstructiva (A.M.C.P.E.R.) Miembro del Colegio De Cirujanos Plásticos del Valle De México. Certificado por el Consejo Mexicano de Médicos Bariatras. Master en Cosmiatría.',
+            desc: 'Especialista en Cirugía Plástica. Cédula Profesional No.0589999. Cédula de Especialidad 0030031. Certificación CMCPER, por el Consejo Mexicano de Cirugía Plástica, Estética y Reconstructiva. Certificado No.836. Miembro de la Asociación Mexicana de Cirugía Plástica, Estética y Reconstructiva (A.M.C.P.E.R.) Miembro del Colegio De Cirujanos Plásticos del Valle De México. Certificado por el Consejo Mexicano de Médicos Bariatras. Master en Cosmiatría.',
             imgs: ['foto-perfil.png'],
             type: 'equipo'
         };
@@ -64,6 +73,10 @@
             }
         };
 
+
+        $scope.purgue = function(str) {
+            return $sce.trustAsHtml(str);
+          };
         $scope.changeFilterSub = function(list, obj){
 
             for(var i in list){
@@ -80,7 +93,7 @@
             $scope.menuShow = false;
         };
 
-        $scope.servicio = { imgs:['s1.jpg']};
+        $scope.servicio = { imgs:['shutterstock_267028289.jpg']};
         $scope.fullActive = false;
         $scope.full = function(obj){
             $scope.servicio = obj;
@@ -90,30 +103,30 @@
             $scope.fullActive = false;
         };
 
-          $('h1').parallaxContent({
-            shift: -15,
-            duration: 1
-          });
-          $('#contentInfo').parallaxContent({
-            shift: -15,duration: 2
-          });
+        //   $('h1').parallaxContent({
+        //     shift: -15,
+        //     duration: 1
+        //   });
+        //   $('#contentInfo').parallaxContent({
+        //     shift: -15,duration: 2
+        //   });
 
 
 
+            
           jssor_1_slider_init1 = function() {
-
             var jssor_1_options = {
-              $AutoPlay: 0,
-              $SlideDuration: 800,
-              $SlideEasing: $Jease$.$OutQuint,
-              $ArrowNavigatorOptions: {
+                $AutoPlay: 0,
+                $SlideDuration: 800,
+                $SlideEasing: $Jease$.$OutQuint,
+                $ArrowNavigatorOptions: {
                 $Class: $JssorArrowNavigator$
-              },
-              $BulletNavigatorOptions: {
+                },
+                $BulletNavigatorOptions: {
                 $Class: $JssorBulletNavigator$
-              }
+                }
             };
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            var jssor_1_slider =  jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
             var MAX_WIDTH = 1500;
             function ScaleSlider1() {
                 var containerElement = jssor_1_slider.$Elmt.parentNode;
@@ -126,7 +139,6 @@
                     window.setTimeout(ScaleSlider1, 5);
                 }
             }
-
             ScaleSlider1();
 
             $Jssor$.$AddEvent(window, "load", ScaleSlider1);
@@ -140,7 +152,7 @@
             var jssor_1_SlideshowTransitions = [
                 {$Duration:1200,$Opacity:2}
               ];
-            var jssor_1_options = {
+            var jssor_2_options = {
                 $StartIndex : $scope.startIndex - 1,
               $AutoPlay: 1,
               $Idle: 5000,
@@ -159,32 +171,33 @@
               }
             };
 
-            var jssor_1_slider = new $JssorSlider$("jssor_2", jssor_1_options);
-            jssor_1_slider.$Elmt.style.margin = "";
+            var jssor_2_slider = new $JssorSlider$("jssor_2", jssor_2_options);
+            jssor_2_slider.$Elmt.style.margin = "";
             var MAX_WIDTH = 10000;
             var MAX_HEIGHT = 10000;
             var MAX_BLEEDING = 1;
 
             function ScaleSlider2() {
-                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerElement = jssor_2_slider.$Elmt.parentNode;
                 var containerWidth = containerElement.clientWidth;
 
                 if (containerWidth) {
-                    var originalWidth = jssor_1_slider.$OriginalWidth();
-                    var originalHeight = jssor_1_slider.$OriginalHeight();
+                    var originalWidth = jssor_2_slider.$OriginalWidth();
+                    var originalHeight = jssor_2_slider.$OriginalHeight();
 
                     var containerHeight = containerElement.clientHeight || originalHeight;
 
                     var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
                     var expectedHeight = Math.min(MAX_HEIGHT || containerHeight, containerHeight);
-                    jssor_1_slider.$ScaleSize(expectedWidth, expectedHeight, MAX_BLEEDING);
-                    jssor_1_slider.$Elmt.style.top = ((containerHeight - expectedHeight) / 2) + "px";
-                    jssor_1_slider.$Elmt.style.left = ((containerWidth - expectedWidth) / 2) + "px";
+                    jssor_2_slider.$ScaleSize(expectedWidth, expectedHeight, MAX_BLEEDING);
+                    jssor_2_slider.$Elmt.style.top = ((containerHeight - expectedHeight) / 2) + "px";
+                    jssor_2_slider.$Elmt.style.left = ((containerWidth - expectedWidth) / 2) + "px";
                 }
                 else {
                     window.setTimeout(ScaleSlider2, 30);
                 }
             }
+            
 
             function OnOrientationChange() {
                 ScaleSlider2();
@@ -198,12 +211,80 @@
             $Jssor$.$AddEvent(window, "orientationchange", OnOrientationChange);
         }
 
+
+        jssor_1_slider_init3 = function() {
+
+
+            var jssor_3_options = {
+                $AutoPlay: 0,
+                $SlideDuration: 800,
+                $SlideEasing: $Jease$.$OutQuint,
+                $ArrowNavigatorOptions: {
+                  $Class: $JssorArrowNavigator$
+                },
+                $BulletNavigatorOptions: {
+                  $Class: $JssorBulletNavigator$
+                }
+              };
+              var jssor_3_slider = new $JssorSlider$("jssor_3", jssor_3_options);
+              var MAX_WIDTH = 1500;
+              function ScaleSlider3() {
+                  var containerElement = jssor_3_slider.$Elmt.parentNode;
+                  var containerWidth = containerElement.clientWidth;
+                  if (containerWidth) {
+                      var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+                      jssor_3_slider.$ScaleWidth(expectedWidth);
+                  }
+                  else {
+                      window.setTimeout(ScaleSlider3, 5);
+                  }
+              }
+  
+              ScaleSlider3();
+  
+              $Jssor$.$AddEvent(window, "load", ScaleSlider3);
+              $Jssor$.$AddEvent(window, "resize", ScaleSlider3);
+              $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider3);
+        }
+        
+
+        
+
         setTimeout(function(){
             jssor_1_slider_init1();
             jssor_1_slider_init2();
+            jssor_1_slider_init3();
         },1000);
+
+        // $( document ).ready(function() {
+        //     jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+        //     jssor_1_slider_init1();
+        //     jssor_1_slider_init2();
+        //     jssor_1_slider_init3();
+        // });
+
+        // $scope.onImgLoad = function (event) {
+        //     console.log(event);
+        //     ScaleSlider1();
+        // }
+
+
     };
-    controller.$inject = ['$scope','$rootScope','$routeParams', '$http'];
+    controller.$inject = ['$scope','$rootScope','$routeParams', '$http', '$sce'];
     angular.module('app').controller('HomeController', controller);
+
+    angular.module('app').directive('sbLoad', ['$parse', function ($parse) {
+    return {
+      restrict: 'A',
+      link: function (scope, elem, attrs) {
+        var fn = $parse(attrs.sbLoad);
+        elem.on('load', function (event) {
+          scope.$apply(function() {
+            fn(scope, { $event: event });
+          });
+        });
+      }
+    };
+  }]);
 
 })();

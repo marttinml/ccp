@@ -1,3 +1,4 @@
+<div class="css3-spinner" id="css3-spinner"><div class="css3-spinner-triangle-path"><div style="background-color:rgb(51,0,102);"></div><div style="background-color:rgb(51,0,102);"></div><div style="background-color:rgb(51,0,102);"></div></div></div>
 <header>
 	<nav>
 			<ul class="a-left">
@@ -32,11 +33,14 @@
 
 <section class="home" id="home">
     <div id="jssor_2" style="position:relative;margin:0 auto;top:0px;left:0px;width:1366px;height:900px;overflow:hidden;visibility:hidden;">
-            <!-- Loading Screen -->
+			<!-- Loading Screen -->
+			<div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+				<img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;"/>
+			</div>
             <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1366px;height:900px;overflow:hidden;">
                     
                     <div ng-repeat="item in promociones">
-							<img data-u="image" ng-src="data/promociones/{{item.img}}" />
+							<img  sb-load="onImgLoad($event)" data-u="image" ng-src="data/promociones/{{item.img}}" />
                     </div>
             </div>
             <div data-u="navigator" class="jssorb064" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
@@ -73,7 +77,7 @@
 </section>
 <section class="cirugias padding-bottom-100" id="cirugias">
 	<div class="filer-cats">
-			<ul>
+			<ul >
 					<li ng-repeat="item in categorias" ng-class="{active: item.active}" ng-click="changeFilter(categorias, item)"> 
 							<span>{{item.name}}</span>
 					</li>
@@ -87,10 +91,13 @@
 
 	<h2 class="c-purple">{{filteredServices.length}} <span class="fs-16" ng-show="filteredServices.length === 1">Servicio</span> <span class="fs-16"  ng-show="filteredServices.length !== 1">Servicios</span></h2> 
 
+	<h3 class="c-purple" ng-show="descCategoria">{{titleCategoria}}</h3>
+	<div class="content-text" ng-show="descCategoria"><span ng-bind-html="purgue(descCategoria)"></span>	</div>
+
 	<div class="item-row-relative max-width">
 			<div class="item-col-relative padding-20 width-33p" ng-repeat="servicio in filteredServices = (servicios | filter:search:strict)">
 					<div class="card" ng-click="full(servicio)">
-							<div class="img" ng-style="{'background-image': 'url(data/servicios/'+servicio.imgs[0]+')'}"></div>
+							<div class="wrapper-img-card"><img class="img" ng-src="data/shutter/{{servicio.imgs[0]}}"/></div>
 							<div class="hover-link"><span>VER MÁS</span></div>
 							<div class="info t-center">
 									<h4>{{servicio.title}}</h4>
@@ -98,8 +105,6 @@
 					</div>
 			</div>
 	</div>
-	<h3 class="c-purple" ng-show="descCategoria">{{titleCategoria}}</h3>
-	<div class="content-text" ng-show="descCategoria">{{descCategoria}}</div>
 	<h4 class="c-purple cursor-pointer"  ng-click="full(preguntasf)">Preguntas Frecuentes</h4>
 </section>
 
@@ -107,9 +112,9 @@
 	<h1>Nosotros</h1>
 	<div class="content-info">
 			<p id="contentInfo">
-					En el año de 1991 el Dr. Juan Antonio Treviño Macías, director general, 
+					En el año de 1991 el Dr. Juan Antonio Treviño Macías, Director General, 
 					viendo la necesidad de optimizar y ampliar los servicios en las áreas de 
-					salud y belleza crea el CENTRO DE CIRUGÍA PLÁSTICA S.C.
+					salud y belleza crea el CENTRO DE CIRUGÍA PLÁSTICA, S.C.
 					<br>
 					<br>
 					En nuestro centro hemos integrado los servicios de cirugía plástica, 
@@ -159,7 +164,7 @@
 			<div class="item-col-relative width-50p padding-20">
 					<div class="max-width-350  padding-20 b-white b-radius-4 t-center">
 
-							<h2 class="c-purple">!Agenda tu cita!</h2>
+							<h2 class="c-purple">¡Agenda tu cita!</h2>
 							<hr class="b-purple">
 							<h3 class="c-purple margin-bottom-0">01 (55) 5523 1077</h3>
 							<span class="fs-16">informes@centrodecirugiaplastica.com</span>
@@ -176,7 +181,7 @@
 			<div class="item-col-relative width-50p padding-20">
 					<div class="max-width-350  padding-20  b-radius-4 t-center b-gradiente">
 
-							<h2 class="c-white">¡Visitanos!</h2>
+							<h2 class="c-white">¡Visítanos!</h2>
 
 							<hr class="b-white">
 							<h4 class="c-white">Magdalena #334 Col. Del Valle C.P. 03100 Benito Juárez, CDMX</h4>
@@ -209,13 +214,13 @@
 							<br>
 
 							<div class="c-gray">
-									Licenciatura como Médico Cirujano y Paterno: 0589999
+									Licenciatura como Médico Cirujano y Partero: 0589999
 							</div>
 							<div class="c-gray">
-									Especialidad en Cirugía Plástica y Reconstructiva: 0030031
+									Especialidad en Cirugía Plástica, Estética y Reconstructiva: 0030031
 							</div>
 							<div class="c-gray">
-									Certificación CMCPER: 5306
+									Certificación CMCPER: 836
 							</div>
 							<div class="c-gray">
 									Registro cofepris: 000000000
@@ -235,9 +240,9 @@
 							<a class="padding-20" href="https://instagram.com/ccplasticasc" target="_blank"><i class="fab c-white fa-2x fa-instagram cursor-pointer"></i></a> 
 					</div>
 					<div class="item-col-relative t-right padding-20 fs-10 width-50p">
-							<a href="https://aloux.mx"  class="c-white" target="_black">Aviso de Privacidad</a>
+							<a href="https://centrodecirugiaplastica.com/data/legales/aviso_de_privacidad_ccp.pdf"  class="c-white" target="_black">Aviso de Privacidad</a>
 							<br>
-							<span class=" c-white">© Centro de Cirugia Plastica S.A. de C.V.</span>
+							<span class=" c-white">© Centro de Cirugía Plástica, S.C.</span>
 							<br>
 							<a href="https://aloux.mx" target="_black">Diseño y Desarrollo por Aloux</a>
 					</div>
@@ -248,10 +253,10 @@
 <div class="full-screen" ng-class="{'full-active': fullActive}">
 	<div class="card" ng-show="!servicio.type">
 			<i class="exit fas fa-lg fa-times cursor-pointer" ng-click="min()"></i>
-			<div class="img" ng-style="{'background-image': 'url(data/servicios/'+servicio.imgs[0]+')'}"></div>
-			<div class="info t-center">
+			<div class="img" ng-style="{'background-image': 'url(data/shutter/'+servicio.imgs[0]+')'}"></div>
+			<div class="info">
 					<h2>{{servicio.title}}</h2>
-					<p>{{servicio.desc}}</p>
+					<p> <span ng-bind-html="purgue(servicio.desc)"></span> </p>
 
 					<br>
 					<h2 ng-show="servicio.imgsBeforetoAfter">Antes - Después</h2>
@@ -282,9 +287,7 @@
 							<br><br>
 							<b>¿Es costosa una cirugía plástica?</b>
 							<br>
-							Realmente los costos de estos servicios no son tan elevados como muchas personas creen, sobre todo si toma en cuenta los gastos que realiza comúnmente para el mejoramiento de su persona en ropa, cosméticos, maquillaje y tratamientos “milagrosos”; muchas veces promovidos en los medios masivos de comunicación y que no se comparan de ninguna manera con la mejoría que le pueden brindar nuestros servicios.
-							Además, manejamos tarjetas de crédito y débito, y pago a meses sin intereses.
-							Tenemos también convenio con algunas empresas que otorgan créditos especiales para este fin.
+							Realmente los costos de estos servicios no son tan elevados como muchas personas creen, sobre todo si toma en cuenta los gastos que realiza comúnmente para el mejoramiento de su persona en ropa, cosméticos, maquillaje y tratamientos “milagrosos”; muchas veces promovidos en los medios masivos de comunicación y que no se comparan de ninguna manera con la mejoría que le pueden brindar nuestros servicios. Además, manejamos tarjetas de crédito y débito, y pago a mensualidades. Tenemos también convenio con algunas empresas que otorgan créditos especiales para este fin.
 							<br><br>
 							<b>¿Es riesgoso someterse a una de estas cirugías?</b>
 							<br>
@@ -329,6 +332,12 @@
 								<img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;"/>
 							</div>
 							<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:640px;overflow:hidden;">
+								
+								<div>
+									<div style="background-color:#e2e2e2;  height: 640px;">
+										<img class="img-slide-item rotate-animate" src="assets/img/cd3.png"  ng-click="full(services[2])"/>
+									</div>
+								</div>
 								<div>
 									<div style="background-color:#e2e2e2;  height: 640px;">
 											<img class="img-slide-item rotate-animate" src="assets/img/cd1.png" ng-click="full(services[0])"/>
@@ -336,14 +345,19 @@
 								</div>
 								<div>
 									<div style="background-color:#e2e2e2;  height: 640px;">
-											<img class="img-slide-item rotate-animate" src="assets/img/cd2.png"  ng-click="full(services[1])"//>
+										<img class="img-slide-item rotate-animate" src="assets/img/cd4.png"  ng-click="full(services[3])"/>
 									</div>
 								</div>
 								<div>
 									<div style="background-color:#e2e2e2;  height: 640px;">
-									<img class="img-slide-item rotate-animate" src="assets/img/cd3.png"  ng-click="full(services[2])"//>
+										<img class="img-slide-item rotate-animate" src="assets/img/cd5.png"  ng-click="full(services[4])"/>
 									</div>
-							</div>
+								</div>
+								<div>
+									<div style="background-color:#e2e2e2;  height: 640px;">
+										<img class="img-slide-item rotate-animate" src="assets/img/cd6.png"  ng-click="full(services[5])"/>
+									</div>
+								</div>
 							</div>
 							<div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
 								<svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
@@ -366,13 +380,13 @@
 					<div class="card min-heigth-400">
 							<div class="info-middle" >
 									<h4>Dra. Irma Yolanda Bernal Mariscal.</h4>
-									<p class="docs">SUBDIRECTOR MÉDICO</p>
+									<p class="docs">Subdirector Médico</p>
 									<span class="fs-12">
-											Especialista en Cirugía plástica. Cédula profesional No.AESSA-22797.
-											Certificada por el Consejo Mexicano de Cirugía Plástica, Estética y Reconstructiva. Certificado No.1049.
-											Miembro de la Asociación Mexicana de Cirugía Plástica Estética y Reconstructiva.
-											Miembro del Colegio De Cirujanos Plásticos Del Valle De México.
-											Miembro de la I.S.A.P.S. (International Society Of Plastic Surgery).
+											Especialista en Cirugía Plástica. Cédula Profesional No.AESSA-22797. <br>
+											Certificada por el Consejo Mexicano de Cirugía Plástica, Estética y Reconstructiva, Certificado  No.1049. <br>
+											Miembro de la Asociación Mexicana de Cirugía Plástica, Estética y Reconstructiva. <br>
+											Miembro del Colegio De Cirujanos Plásticos Del Valle De México. <br>
+											Miembro de la I.S.A.P.S. (International Society Of Plastic Surgery). <br>
 									</span>
 							</div>
 					</div>
@@ -383,11 +397,11 @@
 					<div class="card min-heigth-400">
 							<div class="info-middle" >
 									<h4>Dr. Gustavo Trejo Hernández.</h4>
-									<p class="docs">JEFE DE ANESTESIOLOGÍA</p>
+									<p class="docs">Jefe de Anestesiología</p>
 									<span class="fs-12">
-											Cédula profesional médico general No.993147.
-											Cédula profesional de Anestesiología. No.AECEM16952.
-											Certificado por el Consejo Nacional de Certificación en Anestesiología. Certificado No.2758.
+											Cédula Profesional Médico General No.993147. <br>
+											Cédula Profesional de Anestesiología. No.AECEM16952. <br>
+											Certificado por el Consejo Nacional de Certificación en Anestesiología. Certificado No.2758. <br>
 									</span>
 							</div>
 					</div>
@@ -397,11 +411,12 @@
 					<div class="card min-heigth-400">
 							<div class="info-middle" >
 									<h4>Dr. Alfredo Bobadilla Aguirre.</h4>
-									<p class="docs">SMEDICINA INTERNA Y CARDIOLOGÍA</p>
+									<p class="docs">Medicina Interna y Cardiología</p>
 									<span class="fs-12">
-											Cardiología. Cédula profesional No. AECEM32278.
-											Cardiología Pediátrica (Cédula profesional###).
-											Certificado por los Consejos Mexicanos de Cardiología y Cardiología Pediátrica.
+											Cedula Profecional: 715581 <br>
+											Cardiología. Cédula Profesional No. AECEM32278. <br>
+											Cardiología Pediátrica, Cédula Profesional No. 3411169 <br>
+											Certificado por los Consejos Mexicanos de Cardiología y Cardiología Pediátrica. <br>
 									</span>
 							</div>
 					</div>
@@ -411,9 +426,9 @@
 					<div class="card min-heigth-400">
 							<div class="info-middle" >
 									<h4>Dr. Juan Antonio Treviño Macías.</h4>
-									<p class="docs">SERVICIO DE COSMIATRÍA Y REHABILITACIÓN</p>
+									<p class="docs">Servicio de Cosmiatría y Rehabilitación</p>
 									<span class="fs-12">
-											Cosmiatra Carla Alejandra Treviño Villarreal.
+											Cosmiatra Carla Alejandra Treviño Villarreal. <br>
 											Quiropráctico María Alonso Díaz.
 									</span>
 							</div>
@@ -421,5 +436,84 @@
 			</div>
 	</div> 
 			
+	<br>
+			<br>
+			<h3>Instalaciones</h3>
+
+			<div style="background-color: #e2e2e2">
+					<div id="jssor_3" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:440px;overflow:hidden;visibility:hidden;">
+		 
+							<div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+								<img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;"/>
+							</div>
+							<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:440px;overflow:hidden;">
+								<div>
+									<div style="background-color:#e2e2e2;  height: 440px;">
+											<img class="img-slide-item-in rotate-animate" src="data/instalaciones/i1-min.jpg" />
+									</div>
+								</div>
+								<div>
+									<div style="background-color:#e2e2e2;  height: 440px;">
+											<img class="img-slide-item-in rotate-animate" src="data/instalaciones/i2-min.jpg"/>
+									</div>
+								</div>
+								<div>
+										<div style="background-color:#e2e2e2;  height: 440px;">
+												<img class="img-slide-item-in rotate-animate" src="data/instalaciones/i3-min.jpg"/>
+										</div>
+									</div>
+								<div>
+									<div style="background-color:#e2e2e2;  height: 440px;">
+										<img class="img-slide-item-in rotate-animate" src="data/instalaciones/i4-min.jpg"/>
+									</div>
+								</div>
+								<div>
+									<div style="background-color:#e2e2e2;  height: 440px;">
+										<img class="img-slide-item-in rotate-animate" src="data/instalaciones/i5-min.jpg" />
+									</div>
+								</div>
+								<div>
+									<div style="background-color:#e2e2e2;  height: 440px;">
+										<img class="img-slide-item-in rotate-animate" src="data/instalaciones/i6-min.jpg"/>
+									</div>
+								</div>
+								<div>
+									<div style="background-color:#e2e2e2;  height: 440px;">
+										<img class="img-slide-item-in rotate-animate" src="data/instalaciones/i7-min.jpg"/>
+									</div>
+								</div>
+								<div>
+										<div style="background-color:#e2e2e2;  height: 440px;">
+											<img class="img-slide-item-in rotate-animate" src="data/instalaciones/i8-min.jpg" />
+										</div>
+									</div>
+									<div>
+										<div style="background-color:#e2e2e2;  height: 440px;">
+											<img class="img-slide-item-in rotate-animate" src="data/instalaciones/i9-min.jpg"/>
+										</div>
+									</div>
+									<div>
+										<div style="background-color:#e2e2e2;  height: 440px;">
+											<img class="img-slide-item-in rotate-animate" src="data/instalaciones/i10-min.jpg"/>
+										</div>
+									</div>
+									<div>
+										<div style="background-color:#e2e2e2;  height: 440px;">
+											<img class="img-slide-item-in rotate-animate" src="data/instalaciones/i11-min.jpg"/>
+										</div>
+									</div>
+							</div>
+							<div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+								<svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+									<polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+								</svg>
+							</div>
+							<div data-u="arrowright" class="jssora051" style="width:65px;height:65px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+								<svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+									<polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+								</svg>
+							</div>
+					</div>
+			</div>
 	</div>
 </div> 
